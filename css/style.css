@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Italianno&family=Nunito:wght@200&family=Oswald:wght@300&family=PT+Sans+Narrow&family=Poppins:wght@200;300;500&family=Roboto:wght@400;500;700;900&family=Ubuntu:wght@300;400;500&family=Zen+Antique&family=Zen+Antique+Soft&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+header{
+    display: flex;
+    background-color: #222b31;
+    justify-content: space-between;
+   
+    align-items: center;
+}
+header .logo img{
+    height: 80px;
+    width: 80px;
+    padding: 10px;
+    margin-left: 50px;
+    
+    border-radius: 50%;
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.header_logo{
+    color: #eeee;
+    font-size: 600;
+}
+.nav_list{
+    display: flex;
+    align-items: center;
+}
+.nav_item{
+    margin: 0 8px;
+}
+.nav_link{
+    padding: 10px;
+    color: #eeee;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 5px;
+}
+.nav_link:hover{
+    background-color: #08adb5;
+}
+.header_toggle,
+.header_close{
+    display: none;
+}
+
+
+@media screen and (max-width: 778px) {
+    header{
+        height: 48px;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    .logo a{
+        font-size: 0.9rem;
+    }
+    .logo img{
+        width: 30px;
+    }
+    .header_toggle{
+        display: inline;
+        color: #eeee;
+        font-size: 24px;
+    }
+    .header_close{
+        position: absolute;
+        right: 24px;
+        display: inline;
+        font-size: 24px;
+        border-radius: 50%;
+    }
+    .header_close:hover{
+        background-color: #00adb5;
+    }
+    .nav{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: #222831;
+        color: #eeee;
+        width: 60%;
+        height: 100vh;
+        padding: 24px 0;
+        z-index: 100;
+        transition: 0.5s;
+        border-radius: 0 0 0 50%;
+    }
+    .nav_list{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav_item{
+        margin: 2rem 0;
+    }
+    .show{
+      right: 0;
+    }
+}
